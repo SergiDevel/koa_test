@@ -5,6 +5,8 @@ import 'package:koa_test/features/thoughts/presentation/helpers/add_thought_dial
 import 'package:koa_test/features/thoughts/presentation/widgets/add_thought_button.dart';
 import 'package:koa_test/theme.dart';
 
+const _titleFontSize = 40.0;
+
 class ThoughtDescription extends StatelessWidget {
   const ThoughtDescription({Key? key}) : super(key: key);
 
@@ -28,7 +30,7 @@ class ThoughtDescription extends StatelessWidget {
                 children: const [
                   Text(
                     'This is your Thoughts Diary',
-                    style: TextStyle(fontSize: 40),
+                    style: TextStyle(fontSize: _titleFontSize),
                     textAlign: TextAlign.center,
                   ),
                   Spacer(),

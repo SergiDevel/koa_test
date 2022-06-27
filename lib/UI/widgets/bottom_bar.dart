@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
+const _bottomBarHeightMultiplier = 0.1;
+const _iconSize = 20.0;
+
 class _BottomNavigation {
   _BottomNavigation({
     required this.title,
@@ -38,7 +41,7 @@ class KoaBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: MediaQuery.of(context).size.height * _bottomBarHeightMultiplier,
       child: BottomNavigationBar(
         showUnselectedLabels: true,
         currentIndex: 2,
@@ -46,7 +49,7 @@ class KoaBottomBar extends StatelessWidget {
           for (_BottomNavigation navigation in _bottomNavigationList)
             BottomNavigationBarItem(
               icon: Icon(
-                size: 20,
+                size: _iconSize,
                 navigation.icon,
               ),
               label: navigation.title,

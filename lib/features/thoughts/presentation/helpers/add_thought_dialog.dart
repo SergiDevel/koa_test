@@ -7,6 +7,8 @@ import 'package:koa_test/features/thoughts/presentation/pages/thoughts_list_page
 import 'package:koa_test/features/thoughts/presentation/widgets/add_thought_button.dart';
 import 'package:koa_test/theme.dart';
 
+const _titleFontSize = 20.0;
+
 Mood? _thoughtMood;
 
 void dialogNavigation(BuildContext context) {
@@ -142,16 +144,16 @@ class _HeaderRow extends StatelessWidget {
           const Text(
             'ADD A THOUGHT',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: _titleFontSize,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: whiteColor,
             ),
           ),
           const Spacer(),
           IconButton(
             icon: const Icon(
               Icons.close,
-              color: Colors.white,
+              color: whiteColor,
             ),
             onPressed: () => dialogNavigation(context),
           ),

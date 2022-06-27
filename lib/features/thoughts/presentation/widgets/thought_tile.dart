@@ -43,7 +43,11 @@ class ThoughtTile extends StatelessWidget {
                             overflow: TextOverflow.fade,
                           ),
                         ),
-                        SizedBox(child: Text(thought.createdAtString)),
+                        SizedBox(
+                          width:
+                              MediaQuery.of(context).size.width * _iconTextMult,
+                          child: Text(thought.createdAtString),
+                        ),
                       ],
                     ),
                     IconButton(

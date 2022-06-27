@@ -8,7 +8,6 @@ part 'thoughts_bloc_state.dart';
 
 class ThoughtsBloc extends Bloc<ThoughtsBlocEvent, ThoughtsBlocState> {
   ThoughtsBloc() : super(ThoughtsBlocList(thoughts: thoughtsList)) {
-    on<AddThought>(_addThought);
     on<AddThoughtDescription>(_addThoughtDescription);
   }
   Future<void> _addThoughtDescription(
@@ -16,13 +15,5 @@ class ThoughtsBloc extends Bloc<ThoughtsBlocEvent, ThoughtsBlocState> {
     Emitter emit,
   ) async {
     emit(AddThoughtDescriptionState());
-  }
-
-  Future<void> _addThought(
-    AddThought event,
-    Emitter emit,
-  ) async {
-    thoughtsList.add(event.thought);
-    emit(ThoughtsBlocList(thoughts: thoughtsList));
   }
 }

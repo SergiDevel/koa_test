@@ -8,6 +8,8 @@ const _iconSizeMult = 0.1;
 const _half = 0.5;
 const _seventy = 0.7;
 const _threeHeight = 0.03;
+const _questionFontSize = 16.0;
+const _dateFontSize = 12.0;
 
 class ThoughtElementPage extends StatelessWidget {
   const ThoughtElementPage({Key? key, required this.thought}) : super(key: key);
@@ -42,7 +44,7 @@ class ThoughtElementPage extends StatelessWidget {
                       'Is there any evidence your thought is true?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: _questionFontSize,
                       ),
                     ),
                     SizedBox(
@@ -101,7 +103,7 @@ class _TitleAppBar extends StatelessWidget {
                   thought.createdAtString,
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
-                    fontSize: 12,
+                    fontSize: _dateFontSize,
                   ),
                 ),
               ),
